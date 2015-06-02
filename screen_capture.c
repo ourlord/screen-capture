@@ -4,7 +4,7 @@
 typedef struct{
    int x,y,w,h;
 }rect_t;
-char *home="/home/kkz", perl_script[64];
+char *home="/home/lawliet", perl_script[64];
 Screen* scr;
 
 void setpos(const XButtonEvent*, rect_t*);
@@ -200,7 +200,7 @@ void setpos(const XButtonEvent* but, rect_t* region){
 }
 
 int main(int argc, char **argv) {
-   sprintf(perl_script, "%s/bin/bkup/screen_cap.pl", home);
+   sprintf(perl_script, "./screen_cap.pl");
    if(access(perl_script, F_OK)){
 	fprintf(stderr, "Cannot find script %s\n", perl_script);
 	return 1;
