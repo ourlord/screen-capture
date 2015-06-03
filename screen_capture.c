@@ -4,7 +4,7 @@
 typedef struct{
    int x,y,w,h;
 }rect_t;
-char *home="/home/lawliet", perl_script[64];
+//const char* PERSONAL_PERL5LIB = "/usr/lib/perl5";
 Screen* scr;
 
 void setpos(const XButtonEvent*, rect_t*);
@@ -113,7 +113,7 @@ void scrot_sel_and_grab_image(void) {
 					// change cursor shape
 				   }else if(pid_capture==0){
 					char top[8], bottom[8], left[8], right[8], perl5lib[32];
-					sprintf(perl5lib, "/usr/lib/perl5");
+					//sprintf(perl5lib, PERSONAL_PERL5LIB);
 					sprintf(top,"%d",rect_region.y);
 					sprintf(bottom,"%d",rect_region.y+rect_region.h);
 					sprintf(left,"%d",rect_region.x);
