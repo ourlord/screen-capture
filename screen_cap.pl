@@ -7,7 +7,7 @@ use Const::Fast;
 const my %constant=>(max_duration=>20,      # sec
    out_name=>'/tmp/test.gif', fps=>13,      # output filename, frame per sec
    time_rescale_factor => 1.3,
-   resize_option=>'--resize-fit 300x200 --resize-method lanczos3');
+   resize_option=>'--resize-fit 300x200');
 const my $delay=>$constant{time_rescale_factor}/$constant{fps};    # in unit of sec
 const my $max_frames=>$constant{fps}*$constant{max_duration};
 my @frames; my $interrupt=0;

@@ -113,7 +113,7 @@ void scrot_sel_and_grab_image(void) {
 					// change cursor shape
 				   }else if(pid_capture==0){
 					char top[8], bottom[8], left[8], right[8], perl5lib[32];
-					sprintf(perl5lib, "%s/.perl5/lib/perl5", home);
+					sprintf(perl5lib, "/usr/lib/perl5");
 					sprintf(top,"%d",rect_region.y);
 					sprintf(bottom,"%d",rect_region.y+rect_region.h);
 					sprintf(left,"%d",rect_region.x);
